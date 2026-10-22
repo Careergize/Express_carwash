@@ -1,0 +1,3 @@
+import { StrictMode } from 'react'; import { createRoot } from 'react-dom/client'; import App from './App'; import './styles/global.css'; import './styles/editorial.css';
+createRoot(document.getElementById('root')!).render(<StrictMode><App /></StrictMode>);
+requestAnimationFrame(()=>{const heroVideo=document.querySelector<HTMLVideoElement>('.hero-video');if(heroVideo){heroVideo.muted=true;heroVideo.defaultMuted=true;heroVideo.src='/videos/car-wash-hero.mp4';heroVideo.playbackRate=.85;heroVideo.addEventListener('loadedmetadata',()=>{heroVideo.muted=true;heroVideo.playbackRate=.85},{once:true});heroVideo.load();}});
